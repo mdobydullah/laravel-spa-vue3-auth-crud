@@ -7,11 +7,11 @@
                     <div class="form-group">
                         <label>Name</label>
                         <input type="text" class="form-control" v-model="book.name">
-                    </div>
+                    </div><br>
                     <div class="form-group">
                         <label>Author</label>
                         <input type="text" class="form-control" v-model="book.author">
-                    </div>
+                    </div><br>
                     <button type="submit" class="btn btn-primary">Update Book</button>
                 </form>
             </div>

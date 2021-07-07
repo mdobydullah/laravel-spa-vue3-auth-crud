@@ -17,7 +17,7 @@
                                     <input id="email" type="email" class="form-control" v-model="email" required
                                            autofocus autocomplete="off">
                                 </div>
-                            </div>
+                            </div><br>
 
                             <div class="form-group row">
                                 <label for="password" class="col-md-4 col-form-label text-md-right">Password</label>
@@ -25,7 +25,7 @@
                                     <input id="password" type="password" class="form-control" v-model="password"
                                            required autocomplete="off">
                                 </div>
-                            </div>
+                            </div><br>
 
                             <div class="form-group row mb-0">
                                 <div class="col-md-8 offset-md-4">
@@ -60,17 +60,17 @@ export default {
                         email: this.email,
                         password: this.password
                     })
-                        .then(response => {
-                            console.log(response.data)
-                            if (response.data.success) {
-                                this.$router.go('/dashboard')
-                            } else {
-                                this.error = response.data.message
-                            }
-                        })
-                        .catch(function (error) {
-                            console.error(error);
-                        });
+                    .then(response => {
+                        console.log(response.data)
+                        if (response.data.success) {
+                            this.$router.go('/dashboard')
+                        } else {
+                            this.error = response.data.message
+                        }
+                    })
+                    .catch(function (error) {
+                        console.error(error);
+                    });
                 })
             }
         }
